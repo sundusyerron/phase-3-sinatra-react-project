@@ -7,10 +7,6 @@
 
 ## Introduction
 
-Congrats on getting through all the material for Phase 3! Now's the time to put
-it all together and build something from scratch to reinforce what you know and
-expand your horizons.
-
 The focus of this project is **building a Sinatra API backend** that uses
 **Active Record** to access and persist data in a database, which will be used
 by a separate **React frontend** that interacts with the database via the API.
@@ -72,11 +68,17 @@ right corner of the repo page.
 The `app/controllers/application_controller.rb` file has an example GET route
 handler. Replace this route with routes for your project.
 
+# Running Application
+
 You can start your server with:
 
 ```console
 $ bundle exec rake server
 ```
+      'rake db:migrate'
+
+  'bundle exec rake db:seed'
+
 
 This will run your server on port
 [http://localhost:9292](http://localhost:9292).
@@ -116,23 +118,10 @@ fetch("http://localhost:9292/test")
 - Once you have a project idea, come up with a domain model and decide what
   relationships exist between the models in your application. Use a tool like
   [dbdiagram.io][] to help visualize your models.
-- Decide on your API endpoints. What data should they return? What kind of CRUD
-  action should they perform? What data do they need from the client?
-- Use [Postman][postman download] to test your endpoints.
-- Use `binding.pry` to debug your requests on the server. It's very helpful to use a
-  `binding.pry` in your controller within a route to see what `params` are being
-  sent.
-- Use the [Network Tab in the Dev Tools][network tab] in the frontend to debug
-  your requests.
+- Decide on your API endpoints. What data should they return? What ki
 
 ## Resources
 
 - [create-react-app][]
 - [dbdiagram.io][]
 - [Postman][postman download]
-
-[create-react-app]: https://create-react-app.dev/docs/getting-started
-[create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
-[dbdiagram.io]: https://dbdiagram.io/
-[postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
