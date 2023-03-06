@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-class UserController < AppController
-
-    @helper: read JSON body
+class UserController <  ApplicationController
     before do
-      begin
-        @user = user_data
-      rescue
         @user = nil
+        begin
+          @user = JSON.parse(request.body.read)
+        rescue JSON::ParserError => e
+          puts "Error parsing JSON: #{e}"
+        end
       end
-    end
+      
   
     #@method: create a new user
     post '/auth/register' do

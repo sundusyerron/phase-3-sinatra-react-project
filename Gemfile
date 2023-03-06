@@ -1,6 +1,6 @@
 source "https://rubygems.org/"
 
-# ruby File.read('.ruby-version').strip
+ruby File.read('.ruby-version').strip
 
 gem "rack-cors", "~> 1.1"
 
@@ -29,5 +29,6 @@ gem "rack-contrib", "~> 2.3"
 group :development do
     gem "pry", "~> 0.14.1"
     gem 'rerun', '~> 0.14.0'
-    gem 'faker'
+    
 end
+gem 'faker'
